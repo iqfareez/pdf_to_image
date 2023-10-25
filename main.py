@@ -50,4 +50,12 @@ for image in images:
         with Color('#ffffff') as white:
             twenty_percent = int(65535 * 0.2)  # Note: percent must be calculated from Quantum
             img.transparent_color(white, alpha=0.0, fuzz=twenty_percent)
-        img.save(filename=f'output/{get_filename(image)}.png')    
+        img.save(filename=f'output/{get_filename(image)}.png')  
+
+print('Conversion complete')  
+
+# clear intermediate folder
+print('Removing intermediate folder')
+for image in images:
+    os.remove(image)
+os.rmdir(intermediate_folder)
