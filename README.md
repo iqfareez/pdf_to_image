@@ -23,7 +23,7 @@ Step shown below are for MacOS/Linux
   ```
   or
   ```
-  sudo apt install imagemagick
+  sudo apt update && sudo apt install imagemagick
   ```
 
 ## Usage
