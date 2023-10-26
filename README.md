@@ -36,6 +36,22 @@ python3 main.py <filename>
 
 Replace `<filename>` with actual filename, eg: `sample.pdf`. Output will be saved in `output` folder.
 
+### Using Docker
+
+Build the image
+
+```
+docker build -t pdf_to_image .
+```
+
+Run the image
+
+```
+docker run -it --rm -v $(pwd):/app pdf_to_image python3 main.py <path_to_file>
+```
+
+Replace `<path_to_file>` with actual filename, eg: `/app/sample.pdf`. Output will be saved in `output` folder.
+
 ## Troubleshooting
 
 **Error: `ImportError: MagickWand shared library not found. You probably had not installed ImageMagick library. Try to install: brew install freetype imagemagick`**
