@@ -18,23 +18,24 @@ Step shown below are for MacOS/Linux
   pip install -r requirements.txt
   ```
 - Install ImageMagick
+
   ```
   brew install imagemagick
   ```
+
   or
+
   ```
   sudo apt update && sudo apt install imagemagick
   ```
 
-## Usage
+- Then, run the script
 
-Run the script
+  ```
+  python3 main.py <filename>
+  ```
 
-```
-python3 main.py <filename>
-```
-
-Replace `<filename>` with actual filename, eg: `sample.pdf`. Output will be saved in `output` folder.
+  Replace `<filename>` with actual filename, eg: `sample.pdf`. Output will be saved in `output` folder.
 
 ### Using Docker
 
@@ -44,7 +45,7 @@ Build the image
 docker build -t pdf_to_image .
 ```
 
-Run the image
+Run the image and using it
 
 ```
 docker run -it --rm -v $(pwd):/app pdf_to_image python3 main.py <path_to_file>
